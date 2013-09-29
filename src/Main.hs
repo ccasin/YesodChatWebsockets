@@ -1,9 +1,11 @@
 import Import
 import Handler.Home
-import Handler.Fib
-import Handler.Markdown
 
-mkYesodDispatch "App" resourcesApp
+import Control.Concurrent.Chan (Chan, newChan)
+
+mkYesodDispatch "Chat" resourcesChat
     
 main :: IO ()
-main = warpEnv App
+main = do
+    chan <- newChan
+    warpEnv (Chat chan)

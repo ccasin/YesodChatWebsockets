@@ -1,3 +1,4 @@
-/ HomeR GET
-/fib/#Int FibR GET
-/markdown MarkdownR PUT
+/      HomeR    GET
+/send  SendR    POST
+/recv  ReceiveR GET
+/login LoginR   GET POST

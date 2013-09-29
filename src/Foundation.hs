@@ -5,12 +5,17 @@ import Yesod.Default.Util
 import Data.Default (def)
 import Yesod.Form.Jquery
 
-data App = App
+import Control.Concurrent.Chan (Chan)
+import Network.Wai.EventSource (ServerEvent)
 
-instance Yesod App
-instance YesodJquery App where
+import Data.Text
+
+data Chat = Chat (Chan ServerEvent)
+
+instance Yesod Chat
+instance YesodJquery Chat where
     urlJqueryJs _ = Right "//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"
-instance RenderMessage App FormMessage where
+instance RenderMessage Chat FormMessage where
     renderMessage _ _ = defaultFormMessage
 
-mkYesodData "App" $(parseRoutesFile "config/routes")
+mkYesodData "Chat" $(parseRoutesFile "config/routes")

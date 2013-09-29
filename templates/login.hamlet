@@ -1,0 +1,4 @@
+<div #chat>
+    <form method=post action=@{LoginR}>
+        <input .name type=text placeholder="Enter name">
+        <button>Submit

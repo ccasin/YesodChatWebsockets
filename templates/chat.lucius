@@ -1,0 +1,11 @@
+##{chat} {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+}
+##{output} {
+    width: 200px;
+    height: 300px;
+    border: 1px solid #999;
+    overflow: auto;
+}

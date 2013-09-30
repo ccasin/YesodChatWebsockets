@@ -4,3 +4,6 @@
 
   <div .row-fluid>
     <div .span6>  Nothing Here
+
+  <div .row-fluid>
+    ^{chatWidget}

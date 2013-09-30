@@ -1,0 +1,4 @@
+<div ##{chat}>
+    <h2>Chat
+    <div ##{output}>
+    <input ##{input} type=text placeholder="Enter Message">
